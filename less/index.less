@@ -1,10 +1,8 @@
 // Follow the order in the readme
-* {
+// * {
     
-background:lightpink;
-}
-
-
+// background:lightpink;
+// }
 
 
 
@@ -88,6 +86,9 @@ table {
 
 // global............................................
 
+div, p, footer, h1, h3, a, nav, header{
+    border:solid black 2px;
+  }
 
 
 * {
@@ -148,8 +149,22 @@ table {
 
 
 //   navigation
-
-
+header, h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.5rem;
+    nav {
+        display: flex;
+        justify-content: space-evenly;
+        width:50%;
+        a {
+            color:black;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+    }
+}
 
 
 
