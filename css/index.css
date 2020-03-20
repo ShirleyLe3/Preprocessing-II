@@ -126,16 +126,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-div,
-p,
-footer,
-h1,
-h3,
-a,
-nav,
-header {
-  border: solid black 2px;
-}
 * {
   box-sizing: border-box;
 }
@@ -178,12 +168,23 @@ img {
   width: 100%;
   margin: 0 auto;
 }
+.btn {
+  border-radius: 8px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  background-color: #17A2B8;
+  padding: 15px 10px;
+  width: 95%;
+  font-size: 1.5rem;
+  color: #FFFFFF;
+}
 header,
 h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 1.5rem;
+  padding: 1.5rem 0;
 }
 header nav,
 h2 nav {
