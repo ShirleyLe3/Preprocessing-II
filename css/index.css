@@ -1,3 +1,30 @@
+.button {
+  border-radius: 8px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  background-color: #17A2B8;
+  padding: 15px 10px;
+  width: 95%;
+  font-size: 1.5rem;
+  color: #FFFFFF;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.space-evenly {
+  display: flex;
+  justify-content: space-evenly;
+}
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+.line {
+  border-bottom: 2px dashed silver;
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -179,12 +206,29 @@ img {
   font-size: 1.5rem;
   color: #FFFFFF;
 }
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.space-evenly {
+  display: flex;
+  justify-content: space-evenly;
+}
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+.line {
+  border-top: 2px dashed silver;
+  width: 100%;
+}
 header,
 h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 0;
+  padding-top: 1.5rem;
 }
 header nav,
 h2 nav {
@@ -199,8 +243,9 @@ h2 nav a {
   font-size: 1.2rem;
 }
 .footer {
-  width: 100%;
+  border-bottom: 2px dashed silver;
   border-top: 2px dashed silver;
+  width: 100%;
   background: #FFEBCD;
 }
 .footer p {
@@ -211,9 +256,9 @@ h2 nav a {
 }
 .home .content-section {
   margin: 30px 0;
-  display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  display: flex;
+  justify-content: space-evenly;
 }
 .home .content-section .text-content {
   width: 48%;
@@ -228,7 +273,6 @@ h2 nav a {
 }
 .home .inverse-content {
   padding-bottom: 30px;
-  border-bottom: 2px dashed #C0C0C0;
 }
 .home .inverse-content .text-content {
   padding-left: 1%;

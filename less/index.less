@@ -1,8 +1,14 @@
 // Follow the order in the readme
-// * {
-    
-// background:lightpink;
-// }
+// @import "variables";
+// @import "mixins";
+
+// @import "reset";
+// @import "global";
+
+// @import "navigation";
+// @import "home-page";
+// @import "footer";
+
 
 
 
@@ -22,22 +28,50 @@
 
 
 
-// Mixins
+// Mixins in here
+.button {
+  border-radius: 8px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  background-color:@button-bg;
+  padding: 15px 10px;
+  width: 95%;
+  font-size: 1.5rem;
+  color: @white;
 
 
-// .btn {
-//     border-radius: 25px;
-//     background-color: purple;
-//     padding: 20px;
-//     width: 200px;
-//     height: 150px;
+}
+
+// .button {
+//   border-radius: 25px;
+//   background-color: purple;
+//   padding: 20px;
+//   width: 200px;
+//   height: 150px;
 // }
 
-// .center {
-//     align-items: 
-// }
 
 
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.space-evenly {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.line {
+  border-bottom: 2px dashed silver;
+}
 
 
 
@@ -155,18 +189,31 @@ table {
 
 
   .btn {
-    border-radius: 8px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    background-color:@button-bg;
-    padding: 15px 10px;
-    width: 95%;
-    font-size: 1.5rem;
-    color: @white;
-
-
+    .button();
 }
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.space-evenly {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.line {
+  border-top: 2px dashed silver;
+  width:100%;
+}
+
+
 
 
 
@@ -177,22 +224,21 @@ table {
 
 //   navigation
 header, h2 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 0;
-    nav {
-        display: flex;
-        justify-content: space-evenly;
-        width:50%;
-        a {
-            color:black;
-            text-decoration: none;
-            font-size: 1.2rem;
-        }
-    }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.5rem;
+  nav {
+      display: flex;
+      justify-content: space-evenly;
+      width:50%;
+      a {
+          color:black;
+          text-decoration: none;
+          font-size: 1.2rem;
+      }
+  }
 }
-
 
 
 
@@ -201,7 +247,7 @@ header, h2 {
 
 .footer {
     width: 100%;
-    border-top: 2px dashed silver;
+    .line();
     background:@sandy-beach;
 
     p {
@@ -223,9 +269,8 @@ header, h2 {
 
     .content-section {
       margin: 30px 0;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
+      .wrap();
+      .space-evenly();
   
      
       
@@ -246,8 +291,9 @@ header, h2 {
   
     .inverse-content {
       padding-bottom: 30px;
-      border-bottom: 2px dashed @navigation-border;
-  
+     
+      // order:2;
+      
       .text-content {
         padding-left: 1%;
         padding-right: 0;
@@ -258,7 +304,7 @@ header, h2 {
         padding-left: 0;
       }
     }
-  
+   
     .content-destination {
       width: 75%;
       margin: 0 auto 30px;
