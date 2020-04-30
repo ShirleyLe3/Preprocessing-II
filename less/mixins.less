@@ -1,48 +1,55 @@
 // Mixins in here
-.btn {
-    border-radius: 8px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    background-color:@button-bg;
-    padding: 15px 10px;
-    width: 95%;
-    font-size: 1.5rem;
-    color: @white;
-
-
-}
 
 .button {
-    border-radius: 25px;
-    background-color: purple;
-    padding: 20px;
-    width: 200px;
-    height: 150px;
+  border-radius: 8px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  background-color: @button-bg;
+  padding: 15px 10px;
+  width: 95%;
+  font-size: 1.5rem;
+  color: @white;
 }
 
+.btn {
+  .button();
+}
 
+.center () {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-// Mixins
+.space-between () {
+  display: flex;
+  justify-content: space-between;
+}
 
+.wrap () {
+  display: flex;
+  flex-wrap: wrap;
+}
 
+.flex-column() {
+  display: flex;
+  flex-direction: column;
+}
 
-.center {
+.mobileView () {
+  @media (max-width: 500px) {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+  }
 }
-
-.space-evenly {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.wrap {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.line {
-    border-bottom: 2px dashed silver;
-}
+// .img-content {
+//   width: 40%;
+//   padding-left: 1%;
+//   @media (max-width: 500px) {
+//     order: 2;
+//   }
+//   img {
+//     border-radius: 10px;
+//   }
+// }
